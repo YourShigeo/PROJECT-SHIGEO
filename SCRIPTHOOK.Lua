@@ -1,5 +1,5 @@
 local good_fruits = {"Mera", "Magu", "Hie", "Pika", "Bari", "Tori", "Bomu", "Suke", "Mero"}
-local url = "https://discord.com/api/webhooks/818060760000757760/nFxpqUbP7cW9DLTun_JI5YsGZaj5nwe8IL1x68y5Ukmc3paIf3kHBE8RLHirmb8aCVvX"
+local url = "https://discord.com/api/webhooks/818079770021199893/mfM4dumz_r1jOfb2BNDC441STC-VEZ60xyFCRIHDmhWTNzMXwNJciOpTxip-Nzk3XP3R"
 local time1 = os.date("%H".."%M".."%S")
 local style = "Melee" --BlackLeg, Rokushiki, Kiribachi, Melee, Katana
 Found = false -- leave this
@@ -29,9 +29,7 @@ game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(p1)
                    local msg = "-Logia Farm- \nUser: " .. game.Players.LocalPlayer.Name .. " \nFound: " .. p1.Name .. "\nMinutes Elapsed: " .. time3/60 .. " \n@everyone"
                    syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
                repeat wait(.1)
-               game.Players.LocalPlayer.Character.Humanoid:EquipTool(p1)
                wait(.3)
-               game.ReplicatedStorage.Events.FruitStorage:InvokeServer()
                until not game.Players.LocalPlayer.Backpack:FindFirstChild(p1.Name)
                    wait(.5)
                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild(style))
