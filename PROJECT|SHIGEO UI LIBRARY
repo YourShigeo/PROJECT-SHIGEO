@@ -18,8 +18,9 @@ function Library:CreateWindow(Text)
 	local Hide = Instance.new("TextButton")
 	local H1 = Instance.new("Frame")
 	local H2 = Instance.new("Frame")
-	PROJECTSHIGEOUILIBRARY.Name = "PROJECT|SHIGEO | UI LIBRARY"
+	PROJECTSHIGEOUILIBRARY.Name = ""
 	PROJECTSHIGEOUILIBRARY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    PROJECTSHIGEOUILIBRARY.ResetOnSpawn = false
 	MainContainer.Name = "MainContainer"
 	MainContainer.Draggable = true
 	MainContainer.Active = true
