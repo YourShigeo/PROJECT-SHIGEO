@@ -47,7 +47,7 @@ Players.PlayerAdded:Connect(function(player)
 		Players.LocalPlayer:Kick("Joined unknown player!\n" .. player.Name)
 		local time2 = os.date("%H".."%M".."%S")
 		local time3 = time2 - time1
-		local msg = "KICKED \nUser: " .. game.Players.LocalPlayer.Name .. " \Has been kicked by: " .. player.Name .. "\nMinutes Elapsed: " .. time3/60 .. " \n@NerxNeki#5939"
+		local msg = "KICKED \nUser: " .. game.Players.LocalPlayer.Name .. " \Has been kicked by: " .. player.Name .. "\nMinutes Elapsed: " .. time3/60 .. " \n@Око Саурона"
 		syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
 	end	
 end)
