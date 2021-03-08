@@ -1,0 +1,335 @@
+local Hiden = false
+local mouse = game.Players.LocalPlayer:GetMouse()
+local uis = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local Library = {}
+
+function Library:CreateWindow(Text)
+	local PROJECTSHIGEOUILIBRARY = Instance.new("ScreenGui")
+    local MainContainer = Instance.new("ImageLabel")
+    local Underline = Instance.new("Frame")
+    local Title = Instance.new("TextLabel")
+    local Container = Instance.new("ImageLabel")
+    local Undertable = Instance.new("Frame")
+    local UIListLayout = Instance.new("UIListLayout")
+    local FAKEFRAME = Instance.new("Frame")
+    local Hide = Instance.new("TextButton")
+    local H1 = Instance.new("Frame")
+    local H2 = Instance.new("Frame")
+    PROJECTSHIGEOUILIBRARY.Name = "PROJECT|SHIGEO | UI LIBRARY"
+    PROJECTSHIGEOUILIBRARY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    MainContainer.Name = "MainContainer"
+    MainContainer.Parent = PROJECTSHIGEOUILIBRARY
+    MainContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    MainContainer.BackgroundTransparency = 1.000
+    MainContainer.Position = UDim2.new(0.144130751, 0, 0.234875441, 0)
+    MainContainer.Size = UDim2.new(0, 200, 0, 35)
+    MainContainer.Image = "rbxassetid://3570695787"
+    MainContainer.ImageColor3 = Color3.fromRGB(37, 37, 37)
+    MainContainer.ScaleType = Enum.ScaleType.Slice
+    MainContainer.SliceCenter = Rect.new(100, 100, 100, 100)
+    MainContainer.SliceScale = 0.060
+
+    Underline.Name = "Underline"
+    Underline.Parent = MainContainer
+    Underline.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+    Underline.BorderSizePixel = 0
+    Underline.Position = UDim2.new(0, 0, 0.800000012, 0)
+    Underline.Size = UDim2.new(0, 200, 0, 7)
+
+    Title.Name = "Title"
+    Title.Parent = MainContainer
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1.000
+    Title.BorderSizePixel = 0
+    Title.Size = UDim2.new(0, 163, 0, 28)
+    Title.Font = Enum.Font.TitilliumWeb
+    Title.Text = Text
+    Title.TextColor3 = Color3.fromRGB(3, 167, 255)
+    Title.TextScaled = true
+    Title.TextSize = 10.000
+    Title.TextWrapped = true
+
+    Container.Name = "Container"
+    Container.Parent = MainContainer
+    Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Container.BackgroundTransparency = 1.000
+    Container.Position = UDim2.new(0, 0, 1.22857141, 0)
+    Container.Size = UDim2.new(0, 200, 0, 290)
+    Container.Image = "rbxassetid://3570695787"
+    Container.ImageColor3 = Color3.fromRGB(3, 167, 255)
+    Container.ScaleType = Enum.ScaleType.Slice
+    Container.SliceCenter = Rect.new(100, 100, 100, 100)
+    Container.SliceScale = 0.060
+    Container.ClipsDescendants = true
+
+    Undertable.Name = "Undertable"
+    Undertable.Parent = Container
+    Undertable.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+    Undertable.BorderSizePixel = 0
+    Undertable.Position = UDim2.new(0.5, -97, 0.493103445, -143)
+    Undertable.Size = UDim2.new(0, 194, 0, 285)
+
+    UIListLayout.Parent = Undertable
+    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    UIListLayout.Padding = UDim.new(0, 4)
+
+    FAKEFRAME.Name = "FAKEFRAME"
+    FAKEFRAME.Parent = Undertable
+    FAKEFRAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    FAKEFRAME.BackgroundTransparency = 1.000
+    FAKEFRAME.BorderSizePixel = 0
+    FAKEFRAME.Position = UDim2.new(0.00515463902, 0, 0, 0)
+    FAKEFRAME.Size = UDim2.new(0, 192, 0, 0)
+    Hide.Name = "Hide"
+    Hide.Parent = MainContainer
+    Hide.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+    Hide.BackgroundTransparency = 0.900
+    Hide.Position = UDim2.new(0.814999998, 0, 0, 0)
+    Hide.Size = UDim2.new(0, 37, 0, 28)
+    Hide.Font = Enum.Font.TitilliumWeb
+    Hide.Text = ""
+    Hide.TextColor3 = Color3.fromRGB(3, 167, 255)
+    Hide.TextScaled = true
+    Hide.TextSize = 16.000
+    Hide.TextWrapped = true
+
+    H1.Name = "H1"
+    H1.Parent = Hide
+    H1.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+    H1.BackgroundTransparency = 0.150
+    H1.BorderSizePixel = 0
+    H1.Position = UDim2.new(0.5, 0, 0.5, -10)
+
+    H2.Name = "H2"
+    H2.Parent = Hide
+    H2.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+    H2.BackgroundTransparency = 0.150
+    H2.BorderSizePixel = 0
+    H2.Position = UDim2.new(0.5, 0, 0.5, -10)
+    H2.Rotation = 90.000
+    H2.Size = UDim2.new(0, 1, 0, 20)
+---------------------------------------------------------------------------------------------------
+Hide.MouseButton1Click:Connect(function()
+	if Hiden == false then		
+		H1:TweenSize(UDim2.new(0,1,0,20),"Out","Linear",0.1,false,nil)
+		Container:TweenSize(UDim2.new(0,200,0,0),"Out","Linear",0.1,false,nil)
+		Undertable:TweenSize(UDim2.new(0,194,0,10),"Out","Linear",0.1,false,nil)
+		TweenService:Create(Undertable, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(Container, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
+		Hiden = true
+	elseif Hiden == true then
+		H1:TweenSize(UDim2.new(0,0,0,0),"Out","Linear",0.1,false,nil)
+		Container:TweenSize(UDim2.new(0,200,0,290),"Out","Linear",0.1,false,nil)
+		Undertable:TweenSize(UDim2.new(0,194,0,285),"Out","Linear",0.1,false,nil)
+		TweenService:Create(Undertable, TweenInfo.new(0.2), {BackgroundTransparency = 0}):Play()
+		TweenService:Create(Container, TweenInfo.new(0.2), {ImageTransparency = 0}):Play()
+		Hiden = false
+	end
+end)
+---------------------------------------------------------------------------------------------------
+    local LB = {}
+    function LB:CreateButton(Text,Callback)
+        local Callback = Callback or function() end
+        local Button = Instance.new("ImageLabel")
+        local ButtonText = Instance.new("TextButton")
+        Button.Name = "Button"
+        Button.Parent = Undertable
+        Button.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Button.BackgroundTransparency = 1.000
+        Button.Position = UDim2.new(0.0283505153, 0, 0.028070176, 0)
+        Button.Size = UDim2.new(0, 183, 0, 30)
+        Button.Image = "rbxassetid://3570695787"
+        Button.ImageColor3 = Color3.fromRGB(3, 167, 255)
+        Button.ScaleType = Enum.ScaleType.Slice
+        Button.SliceCenter = Rect.new(100, 100, 100, 100)
+        Button.SliceScale = 0.060
+        ButtonText.Name = Text
+        ButtonText.Parent = Button
+        ButtonText.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        ButtonText.BackgroundTransparency = 1.000
+        ButtonText.BorderSizePixel = 0
+        ButtonText.Size = UDim2.new(0, 183, 0, 30)
+        ButtonText.Font = Enum.Font.TitilliumWeb
+        ButtonText.TextColor3 = Color3.fromRGB(37, 37, 37)
+        ButtonText.TextScaled = true
+        ButtonText.TextSize = 14.000
+        ButtonText.TextWrapped = true
+        ButtonText.MouseButton1Down:Connect(function()
+            game:GetService("TweenService"):Create(Button, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(1, 105, 157)}):Play()
+            wait(0.1)
+            game:GetService("TweenService"):Create(Button, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(3, 167, 255)}):Play()
+        end)
+        ButtonText.MouseButton1Down:Connect(function()
+            pcall(Callback)
+        end)
+    end
+
+    function LB:CreateToggle(Text,Callback)
+        local Actions = {}
+        text = text or "New Toggle"
+        Callback = Callback or function() end
+        local Enabled = false
+
+        local Toggle = Instance.new("ImageLabel")
+        local Background = Instance.new("ImageLabel")
+        local Toggler = Instance.new("TextButton")
+        local ToggleText = Instance.new("TextLabel")
+
+        Toggle.Name = "Toggle"
+        Toggle.Parent = Undertable
+        Toggle.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Toggle.BackgroundTransparency = 1.000
+        Toggle.Position = UDim2.new(0.0283505153, 0, 0.028070176, 0)
+        Toggle.Size = UDim2.new(0, 183, 0, 30)
+        Toggle.Image = "rbxassetid://3570695787"
+        Toggle.ImageColor3 = Color3.fromRGB(3, 167, 255)
+        Toggle.ScaleType = Enum.ScaleType.Slice
+        Toggle.SliceCenter = Rect.new(100, 100, 100, 100)
+        Toggle.SliceScale = 0.060
+
+        Background.Name = "Background"
+        Background.Parent = Toggle
+        Background.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+        Background.BorderColor3 = Color3.fromRGB(27, 42, 53)
+        Background.BorderSizePixel = 0
+        Background.Position = UDim2.new(0.868852437, -50, 0.5, -11)
+        Background.Size = UDim2.new(0, 68, 0, 23)
+        Background.Image = "rbxassetid://3570695787"
+        Background.ImageColor3 = Color3.fromRGB(4, 4, 4)
+        Background.ImageTransparency = 1.000
+        Background.ScaleType = Enum.ScaleType.Slice
+        Background.SliceCenter = Rect.new(100, 100, 100, 100)
+        Background.SliceScale = 0.060
+
+        Toggler.Name = "Toggler"
+        Toggler.Parent = Background
+        Toggler.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Toggler.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Toggler.BorderSizePixel = 2
+        Toggler.Position = UDim2.new(0.0323531218, 0, 0, 0)
+        Toggler.Size = UDim2.new(0, 35, 0, 23)
+        Toggler.Font = Enum.Font.SourceSans
+        Toggler.TextColor3 = Color3.fromRGB(0, 0, 0)
+        Toggler.TextSize = 14.000
+        Toggler.TextTransparency = 1.000
+
+        ToggleText.Name = "ToggleText"
+        ToggleText.Parent = Toggle
+        ToggleText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        ToggleText.BackgroundTransparency = 1.000
+        ToggleText.BorderSizePixel = 0
+        ToggleText.Size = UDim2.new(0, 133, 0, 30)
+        ToggleText.Font = Enum.Font.TitilliumWeb
+        ToggleText.Text = "Toggle"
+        ToggleText.TextColor3 = Color3.fromRGB(37, 37, 37)
+        ToggleText.TextScaled = true
+        ToggleText.TextSize = 14.000
+        ToggleText.TextWrapped = true
+        
+        local function Fire()
+            Enabled = not Enabled
+            pcall(Callback, Enabled)
+        end
+        function Actions:Set(arg)
+            pcall(Callback, arg)
+        end
+
+        Toggler.MouseButton1Click:Connect(function()
+            if Enabled == true then
+                game:GetService("TweenService"):Create(Toggler, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(1, 105, 157)}):Play()
+                Toggler:TweenPosition(UDim2.new(0.474,0,0,0),"Out","Linear",0.1,false,nil)
+            end
+            if Enabled == false then
+                game:GetService("TweenService"):Create(Toggler, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(3, 167, 255)}):Play()
+                Toggler:TweenPosition(UDim2.new(0.032,0,0,0),"Out","Linear",0.1,false,nil)
+            end
+        end)
+
+        Toggler.MouseButton1Click:Connect(Fire)
+    end
+
+    function LB:CreateSlider(Text,minvalue,maxvalue,Callback)
+        Callback = Callback or function()end
+        local Value
+        local Slider = Instance.new("ImageLabel")
+        local SliderText = Instance.new("TextLabel")
+        local SliderButton = Instance.new("TextButton")
+        local Slideriner = Instance.new("Frame")
+
+        Slider.Name = "Slider"
+        Slider.Parent = Undertable
+        Slider.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Slider.BackgroundTransparency = 1.000
+        Slider.Position = UDim2.new(0.0283505153, 0, 0.028070176, 0)
+        Slider.Size = UDim2.new(0, 183, 0, 30)
+        Slider.Image = "rbxassetid://3570695787"
+        Slider.ImageColor3 = Color3.fromRGB(3, 167, 255)
+        Slider.ScaleType = Enum.ScaleType.Slice
+        Slider.SliceCenter = Rect.new(100, 100, 100, 100)
+        Slider.SliceScale = 0.060
+
+        SliderText.Name = "SliderText"
+        SliderText.Parent = Slider
+        SliderText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        SliderText.BackgroundTransparency = 1.000
+        SliderText.BorderSizePixel = 0
+        SliderText.Size = UDim2.new(0, 183, 0, 21)
+        SliderText.Font = Enum.Font.TitilliumWeb
+        SliderText.Text = "Slider"
+        SliderText.TextColor3 = Color3.fromRGB(37, 37, 37)
+        SliderText.TextScaled = true
+        SliderText.TextSize = 14.000
+        SliderText.TextWrapped = true
+
+        SliderButton.Name = "SliderButton"
+        SliderButton.Parent = Slider
+        SliderButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        SliderButton.BorderSizePixel = 0
+        SliderButton.Position = UDim2.new(0, 0, 0.699999988, 0)
+        SliderButton.Size = UDim2.new(0, 183, 0, 9)
+        SliderButton.Font = Enum.Font.SourceSans
+        SliderButton.Text = ""
+        SliderButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+        SliderButton.TextSize = 14.000
+
+        Slideriner.Name = "Slideriner"
+        Slideriner.Parent = SliderButton
+        Slideriner.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Slideriner.BorderSizePixel = 0
+        Slideriner.Position = UDim2.new(0, 0, 0.199998647, 0)
+        Slideriner.Size = UDim2.new(0,1,0,7)
+
+        minvalue = minvalue or 0
+        maxvalue = maxvalue or 100
+        
+        SliderButton.MouseButton1Down:Connect(function()
+            Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 318) * SliderButton.AbsoluteSize.X) + tonumber(minvalue)) or 0
+            pcall(function()
+                Callback(Value)
+            end)
+            Slideriner.Size = UDim2.new(0, math.clamp(mouse.X - Slideriner.AbsolutePosition.X, 0, 183), 0,7)
+            moveconnection = mouse.Move:Connect(function()
+                SliderButton.Text = Value
+                Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 318) * Slideriner.AbsoluteSize.X) + tonumber(minvalue))
+                pcall(function()
+                    Callback(Value)
+                end)
+                Slideriner.Size = UDim2.new(0, math.clamp(mouse.X - Slideriner.AbsolutePosition.X, 0, 183), 0,7)
+            end)
+            releaseconnection = uis.InputEnded:Connect(function(Mouse)
+                if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+                    Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 318) * Slideriner.AbsoluteSize.X) + tonumber(minvalue))
+                    pcall(function()
+                        Callback(Value)
+                    end)
+                    Slideriner.Size = UDim2.new(0, math.clamp(mouse.X - Slideriner.AbsolutePosition.X, 0, 183), 0,7)
+                    moveconnection:Disconnect()
+                    releaseconnection:Disconnect()
+                end
+            end)
+        end)
+    end
+    return LB
+end
