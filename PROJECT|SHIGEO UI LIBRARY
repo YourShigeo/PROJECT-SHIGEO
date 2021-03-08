@@ -1,8 +1,8 @@
-local Library = {}
 local Hiden = false
 local mouse = game.Players.LocalPlayer:GetMouse()
 local uis = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
+local Library = {}
 
 function Library:CreateWindow(Text)
 	local PROJECTSHIGEOUILIBRARY = Instance.new("ScreenGui")
@@ -145,15 +145,15 @@ end)
         Button.ScaleType = Enum.ScaleType.Slice
         Button.SliceCenter = Rect.new(100, 100, 100, 100)
         Button.SliceScale = 0.060
-        ButtonText.Name = Button
-	ButtonText.Text = Text
-        ButtonText.Parent = ButtonText
+        ButtonText.Name = Text
+        ButtonText.Parent = Button
         ButtonText.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
         ButtonText.BackgroundTransparency = 1.000
         ButtonText.BorderSizePixel = 0
         ButtonText.Size = UDim2.new(0, 183, 0, 30)
         ButtonText.Font = Enum.Font.TitilliumWeb
         ButtonText.TextColor3 = Color3.fromRGB(37, 37, 37)
+        ButtonText.Text = Text
         ButtonText.TextScaled = true
         ButtonText.TextSize = 14.000
         ButtonText.TextWrapped = true
@@ -338,7 +338,7 @@ end)
         local OutputText = Instance.new("TextLabel")
 
         Output.Name = "Output"
-        Output.Parent = MainContainer
+        Output.Parent = Undertable
         Output.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
         Output.BackgroundTransparency = 1.000
         Output.Position = UDim2.new(0.0283505153, 0, 0.389473677, 0)
@@ -372,4 +372,3 @@ end)
     end
     return LB
 end
-return Library
