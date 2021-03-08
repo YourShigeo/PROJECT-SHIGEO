@@ -145,7 +145,7 @@ end)
         Button.ScaleType = Enum.ScaleType.Slice
         Button.SliceCenter = Rect.new(100, 100, 100, 100)
         Button.SliceScale = 0.060
-        ButtonText.Name = ButtonText
+        ButtonText.Name = "ButtonText"
         ButtonText.Parent = Button
         ButtonText.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
         ButtonText.BackgroundTransparency = 1.000
