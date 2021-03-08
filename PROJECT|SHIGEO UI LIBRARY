@@ -19,6 +19,9 @@ function Library:CreateWindow(Text)
     PROJECTSHIGEOUILIBRARY.Name = "PROJECT|SHIGEO | UI LIBRARY"
     PROJECTSHIGEOUILIBRARY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     MainContainer.Name = "MainContainer"
+    MainContainer.Draggable = true
+    MainContainer.Active = true
+    MainContainer.Selectable = true
     MainContainer.Parent = PROJECTSHIGEOUILIBRARY
     MainContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     MainContainer.BackgroundTransparency = 1.000
