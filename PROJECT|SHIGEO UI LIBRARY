@@ -333,5 +333,43 @@ end)
             end)
         end)
     end
+     function Library:CreateOutput()
+        local Output = Instance.new("ImageLabel")
+        local TextFrame = Instance.new("Frame")
+        local OutputText = Instance.new("TextLabel")
+
+        Output.Name = "Output"
+        Output.Parent = PS.MainContainer.Container.Undertable
+        Output.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        Output.BackgroundTransparency = 1.000
+        Output.Position = UDim2.new(0.0283505153, 0, 0.389473677, 0)
+        Output.Size = UDim2.new(0, 183, 0, 25)
+        Output.Image = "rbxassetid://3570695787"
+        Output.ImageColor3 = Color3.fromRGB(3, 167, 255)
+        Output.ScaleType = Enum.ScaleType.Slice
+        Output.SliceCenter = Rect.new(100, 100, 100, 100)
+        Output.SliceScale = 0.060
+
+        TextFrame.Name = "TextFrame"
+        TextFrame.Parent = Output
+        TextFrame.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+        TextFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        TextFrame.BorderSizePixel = 2
+        TextFrame.Position = UDim2.new(0, 0, 0.629999995, 0)
+        TextFrame.Size = UDim2.new(0, 183, 0, 35)
+
+        OutputText.Name = "OutputText"
+        OutputText.Parent = TextFrame
+        OutputText.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+        OutputText.BorderSizePixel = 0
+        OutputText.Position = UDim2.new(0.5, -88, 0.5, -15)
+        OutputText.Size = UDim2.new(0, 177, 0, 30)
+        OutputText.Font = Enum.Font.TitilliumWeb
+        OutputText.Text = "N/A"
+        OutputText.TextColor3 = Color3.fromRGB(3, 167, 255)
+        OutputText.TextScaled = true
+        OutputText.TextSize = 14.000
+        OutputText.TextWrapped = true
+    end
     return LB
 end
