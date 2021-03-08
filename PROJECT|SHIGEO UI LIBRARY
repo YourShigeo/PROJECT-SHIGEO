@@ -1,8 +1,10 @@
+
+local Library = {}
+
 local Hiden = false
 local mouse = game.Players.LocalPlayer:GetMouse()
 local uis = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
-local Library = {}
 
 function Library:CreateWindow(Text)
 	local PROJECTSHIGEOUILIBRARY = Instance.new("ScreenGui")
