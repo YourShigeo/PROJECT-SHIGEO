@@ -19,8 +19,6 @@ function Library:CreateWindow(Text)
     PROJECTSHIGEOUILIBRARY.Name = "PROJECT|SHIGEO | UI LIBRARY"
     PROJECTSHIGEOUILIBRARY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     MainContainer.Name = "MainContainer"
-    MainContainer.Active = true
-    MainContainer.Draggable = true
     MainContainer.Parent = PROJECTSHIGEOUILIBRARY
     MainContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     MainContainer.BackgroundTransparency = 1.000
@@ -333,13 +331,13 @@ end)
             end)
         end)
     end
-     function Library:CreateOutput()
+    function LB:CreateOutput()
         local Output = Instance.new("ImageLabel")
         local TextFrame = Instance.new("Frame")
         local OutputText = Instance.new("TextLabel")
 
         Output.Name = "Output"
-        Output.Parent = PS.MainContainer.Container.Undertable
+        Output.Parent = Undertable
         Output.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
         Output.BackgroundTransparency = 1.000
         Output.Position = UDim2.new(0.0283505153, 0, 0.389473677, 0)
