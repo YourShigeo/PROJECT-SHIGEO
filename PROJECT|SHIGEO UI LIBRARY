@@ -337,7 +337,7 @@ end)
         local OutputText = Instance.new("TextLabel")
 
         Output.Name = "Output"
-        Output.Parent = Undertable
+        Output.Parent = MainContainer
         Output.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
         Output.BackgroundTransparency = 1.000
         Output.Position = UDim2.new(0.0283505153, 0, 0.389473677, 0)
