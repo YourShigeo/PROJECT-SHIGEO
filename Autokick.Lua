@@ -43,6 +43,8 @@ Players.PlayerAdded:Connect(function(player)
 		PlayerName()
 	elseif player.UserId == 1121022491 then
 		PlayerName()
+	elseif player.UserId == 615289864 then
+			PlayerName()
 	else
 		Players.LocalPlayer:Kick("Joined unknown player!\n" .. player.Name)
 		local time2 = os.date("%H".."%M".."%S")
