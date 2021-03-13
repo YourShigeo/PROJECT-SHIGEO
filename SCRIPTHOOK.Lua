@@ -1,4 +1,4 @@
-local good_fruits = {"Mera", "Magu", "Hie", "Pika", "Bari", "Tori", "Bomb", "Suke", "Mero", "Zushi"}
+local good_fruits = {"Mera", "Magu", "Hie", "Pika", "Bari", "Tori", "Bomb", "Suke", "Mero", "Zushi", "Goro"}
 local url = "https://discord.com/api/webhooks/818079770021199893/mfM4dumz_r1jOfb2BNDC441STC-VEZ60xyFCRIHDmhWTNzMXwNJciOpTxip-Nzk3XP3R"
 local time1 = os.date("%H".."%M".."%S")
 local style = "Melee" --BlackLeg, Rokushiki, Kiribachi, Melee, Katana
