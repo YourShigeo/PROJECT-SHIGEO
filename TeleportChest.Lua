@@ -4,6 +4,7 @@ while wait(1) do
              if v.Parent.Name == "ClickBox" then
                 if v.Parent.Parent.Name == "ChikaraCrate" then
                     game.Players.LocalPlayer.Character:MoveTo(v.Parent.Position)
+                    fireclickdetector(v)
                 end
              end
         end
