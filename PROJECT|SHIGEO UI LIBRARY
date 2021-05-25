@@ -226,7 +226,7 @@ function Library:CreateWindow(Text)
 		ToggleText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ToggleText.BackgroundTransparency = 1.000
 		ToggleText.BorderSizePixel = 0
-		ToggleText.Size = UDim2.new(0, 133, 0, 30)
+		ToggleText.Size = UDim2.new(0,106,0,29)
 		ToggleText.Font = Enum.Font.TitilliumWeb
 		ToggleText.Text = Text
 		ToggleText.TextColor3 = Color3.fromRGB(37, 37, 37)
