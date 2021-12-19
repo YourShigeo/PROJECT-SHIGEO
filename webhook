@@ -1,5 +1,5 @@
 local fruits = {"Mera", "Magu", "Hie", "Pika", "Bari", "Tori", "Bomb", "Suke", "Mero", "Zushi", "Goro", "Gura", "Gomu", "Suna", "Horo", "Spin", "Kilo"}
-    local url = "https://discord.com/api/webhooks/818079770021199893/mfM4dumz_r1jOfb2BNDC441STC-VEZ60xyFCRIHDmhWTNzMXwNJciOpTxip-Nzk3XP3R"
+    local url = "https://discord.com/api/webhooks/921867329015533598/gcPxDLenVoZLr9O6GiIAbL7GxzABoMXXsUv115YEaysNiccL61L74hZqAm1Wl-F3nFAb"
     
     game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(p1)
         wait()
