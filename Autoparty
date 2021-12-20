@@ -1,0 +1,50 @@
+
+local starterGui = game:GetService("StarterGui");
+local Players = game:GetService("Players")
+if Players.LocalPlayer.Name == "YourShigeo" or Players.LocalPlayer.Name == "Fibrein" then
+    print("Wassup!")
+    Players.PlayerAdded:Connect(function(player)
+        local PlayerName = function()
+            starterGui:SetCore("SendNotification", {
+                Title = "Notice";
+                Text = "Sended party request to:\n"..player.Name;
+                Duration = 5;
+            });
+        end
+        if player.UserId == 1741809805 then
+            wait(5)
+            local A_1 = {["action"] = "invite", ["ply"] = game:GetService("Players").YourShigeo}
+            local Event = game:GetService("ReplicatedStorage").Events.PartySystem
+            Event:FireServer(A_1)
+            PlayerName()
+        elseif player.UserId == 697172356 then
+            wait(5)
+            local A_1 = {["action"] = "invite", ["ply"] = game:GetService("Players").kanuki6}
+            local Event = game:GetService("ReplicatedStorage").Events.PartySystem
+            Event:FireServer(A_1)
+            PlayerName()
+        elseif player.UserId == 615289864 then
+            wait(5)
+            local A_1 = {["action"] = "invite", ["ply"] = game:GetService("Players").Fibrein}
+            local Event = game:GetService("ReplicatedStorage").Events.PartySystem
+            Event:FireServer(A_1)
+            PlayerName()
+        elseif player.UserId == 2555862124 then
+            wait(5)
+            local A_1 = {["action"] = "invite", ["ply"] = game:GetService("Players").YEB_K}
+            local Event = game:GetService("ReplicatedStorage").Events.PartySystem
+            Event:FireServer(A_1)
+            PlayerName()
+            else 
+        end	
+    end)
+else
+    while wait(5) do
+        local Request = game:GetService("Players").LocalPlayer.PlayerGui.CrewInvite
+        if Request then
+            local A_1 = true
+            local Event = game:GetService("Players").LocalPlayer.PlayerGui.CrewInvite.Frame.RemoteEvent
+            Event:FireServer(A_1)
+        end
+    end        
+end
