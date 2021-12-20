@@ -1,0 +1,9 @@
+	local Path = game:GetService("Workspace").Effects.Water
+	local AntiDrown1 = Instance.new("Part")
+	AntiDrown1.Parent = workspace
+	AntiDrown1.Size = Vector3.new(2048,2,2048)
+	AntiDrown1.CanCollide = true
+	AntiDrown1.Anchored = true
+	while wait() do 
+		AntiDrown1.Position = Path.Position + Vector3.new(0,-4,0)    
+	end
