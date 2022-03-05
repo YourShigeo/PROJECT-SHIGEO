@@ -375,6 +375,46 @@ function Library:CreateWindow(Text)
 		OutputText.TextSize = 14.000
 		OutputText.TextWrapped = true
 	end
+
+    function LB:CreateTextBox()
+        local TextBox = Instance.new("TextBox")
+        local FrameA = Instance.new("Frame")
+        local ImageFrame = Instance.new("ImageLabel")
+
+        ImageFrame.Name = "Output"
+		ImageFrame.Parent = Undertable
+		ImageFrame.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+		ImageFrame.BackgroundTransparency = 1.000
+		ImageFrame.Position = UDim2.new(0.0283505153, 0, 0.389473677, 0)
+		ImageFrame.Size = UDim2.new(0, 183, 0, 25)
+		ImageFrame.Image = "rbxassetid://3570695787"
+		ImageFrame.ImageColor3 = Color3.fromRGB(3, 167, 255)
+		ImageFrame.ScaleType = Enum.ScaleType.Slice
+		ImageFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+		ImageFrame.SliceScale = 0.060
+
+		FrameA.Name = "TextFrame"
+		FrameA.Parent = Output
+		FrameA.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
+		FrameA.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		FrameA.BorderSizePixel = 2
+		FrameA.Position = UDim2.new(0, 0, 0.629999995, 0)
+		FrameA.Size = UDim2.new(0, 183, 0, 35)
+
+		TextBox.Name = "OutputText"
+		TextBox.Parent = TextFrame
+		TextBox.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+		TextBox.BorderSizePixel = 0
+		TextBox.Position = UDim2.new(0.5, -88, 0.5, -15)
+		TextBox.Size = UDim2.new(0, 177, 0, 30)
+		TextBox.Font = Enum.Font.TitilliumWeb
+		TextBox.Text = "Input Here npc to farm"
+		TextBox.TextColor3 = Color3.fromRGB(3, 167, 255)
+		TextBox.TextScaled = true
+		TextBox.TextSize = 14.000
+		TextBox.TextWrapped = true
+
+    end 
 	return LB
 end
 return Library
