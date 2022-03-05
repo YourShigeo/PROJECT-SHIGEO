@@ -381,7 +381,7 @@ function Library:CreateWindow(Text)
         local FrameA = Instance.new("Frame")
         local ImageFrame = Instance.new("ImageLabel")
 
-        ImageFrame.Name = "Output"
+        ImageFrame.Name = "ImageFrame"
 		ImageFrame.Parent = Undertable
 		ImageFrame.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
 		ImageFrame.BackgroundTransparency = 1.000
@@ -393,16 +393,16 @@ function Library:CreateWindow(Text)
 		ImageFrame.SliceCenter = Rect.new(100, 100, 100, 100)
 		ImageFrame.SliceScale = 0.060
 
-		FrameA.Name = "TextFrame"
-		FrameA.Parent = Output
+		FrameA.Name = "FrameA"
+		FrameA.Parent = ImageFrame
 		FrameA.BackgroundColor3 = Color3.fromRGB(3, 167, 255)
 		FrameA.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		FrameA.BorderSizePixel = 2
 		FrameA.Position = UDim2.new(0, 0, 0.629999995, 0)
 		FrameA.Size = UDim2.new(0, 183, 0, 35)
 
-		TextBox.Name = "OutputText"
-		TextBox.Parent = TextFrame
+		TextBox.Name = "TextBox"
+		TextBox.Parent = FrameA
 		TextBox.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
 		TextBox.BorderSizePixel = 0
 		TextBox.Position = UDim2.new(0.5, -88, 0.5, -15)
